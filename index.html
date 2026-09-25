@@ -24,11 +24,17 @@ a{color:inherit}
 .hero .quote{margin-top:52px;font-family:var(--serif);font-size:clamp(17px,2.2vw,21px);color:#3a3134}
 .hero .quote::before{content:'״'}.hero .quote::after{content:'״'}
 
+/* FEATURE */
+.feature{padding:0;border-bottom:1px solid var(--line);text-align:center;background:#efe9e1}
+.feature figure{margin:0}
+.feature img{width:100%;max-height:88vh;object-fit:cover;object-position:center 30%;display:block}
+
 /* STILLS */
 .stills{padding:88px 0 96px}
 .stills .head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:36px}
 .stills .head span{font-size:12px;letter-spacing:.24em;color:var(--mut)}
 .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.grid.six{grid-template-columns:repeat(3,1fr)}
 .grid figure{margin:0;overflow:hidden}
 .grid img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.6,.2,1)}
 .grid figure:hover img{transform:scale(1.04)}
@@ -69,7 +75,7 @@ a{color:inherit}
 footer{padding:30px 32px;text-align:center;font-size:11px;letter-spacing:.18em;color:var(--mut);border-top:1px solid var(--line)}
 
 @media (max-width:760px){
-  .grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .grid,.grid.six{grid-template-columns:repeat(2,1fr);gap:12px}
   .about .cols{grid-template-columns:1fr;gap:24px}
   .credits li{grid-template-columns:44px 1fr}
   .credits li p{grid-column:2}
@@ -86,14 +92,20 @@ footer{padding:30px 32px;text-align:center;font-size:11px;letter-spacing:.18em;c
   <p class="quote">זכיתי באוסקר, הם פשוט עוד לא יודעים</p>
 </header>
 
+<section class="feature">
+  <figure><img src="pro/marina-sunset.jpg" alt="זיסי שניאורסון - פורטרט שקיעה במרינה"></figure>
+</section>
+
 <section class="stills">
   <div class="wrap">
     <div class="head"><span>מתוך התוכן</span><span style="direction:ltr;unicode-bidi:isolate">@zisi_just_zisi</span></div>
-    <div class="grid">
-      <figure><img src="grid-6.jpg" alt="זיסי ובנה - רגע משפחתי מתוך התוכן שלה"></figure>
-      <figure><img src="grid-5.jpg" alt="זיסי - הקומדיה היומיומית שלה"></figure>
-      <figure><img src="grid-3.jpg" alt="זיסי בעבודה על התוכן"></figure>
-      <figure><img src="grid-4.jpg" alt="זיסי מצלמת תוכן בבית"></figure>
+    <div class="grid six">
+      <figure><img src="pro/studio-close.jpg" alt="זיסי שניאורסון - פורטרט אולפן"></figure>
+      <figure><img src="pro/outdoor-tree.jpg" alt="זיסי שניאורסון - צילום חוץ אומנותי"></figure>
+      <figure><img src="pro/studio-full.jpg" alt="זיסי שניאורסון - אולפן, מלא"></figure>
+      <figure><img src="pro/outdoor-denim.jpg" alt="זיסי שניאורסון - חוץ, ג׳ינס"></figure>
+      <figure><img src="pro/piano.jpg" alt="זיסי שניאורסון - ליד הפסנתר"></figure>
+      <figure><img src="pro/show-poster.jpg" alt="כרזת המופע - לצחוק בדרך להעצמה"></figure>
     </div>
   </div>
 </section>

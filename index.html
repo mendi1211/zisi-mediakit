@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>זיסי שניאורסון · מדיה קיט</title>
+<meta name="description" content="זיסי שניאורסון - שחקנית, יוצרת תוכן, מנחת אירועים ומובילת סדנאות צחוק. מדיה קיט לשיתופי פעולה.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1d1719; --paper:#faf6f1; --cream:#f4ede5; --gold:#b9a394; --gold-d:#8f7a68;
+  --serif:'Frank Ruhl Libre',serif; --sans:'Heebo',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+
+/* HERO */
+.hero{background:var(--ink);color:#f4efec;text-align:center;padding:110px 28px 90px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 45% at 50% -5%,rgba(185,163,148,.18),transparent 70%);pointer-events:none}
+.kicker{font-size:12px;letter-spacing:.28em;color:var(--gold);font-weight:500;margin-bottom:26px}
+.hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(52px,9vw,104px);line-height:1.02;letter-spacing:-.01em;color:#fff}
+.hero .tagline{margin-top:20px;font-size:clamp(15px,2.2vw,19px);color:#d8cabb;font-weight:300;letter-spacing:.04em}
+.hero .quote{display:inline-block;margin-top:34px;font-family:var(--serif);font-style:italic;font-size:clamp(16px,2.4vw,20px);color:#efe4d8;border:1px solid rgba(244,239,236,.28);border-radius:999px;padding:10px 26px}
+.stats{display:flex;justify-content:center;gap:clamp(26px,6vw,64px);flex-wrap:wrap;margin-top:56px;padding-top:36px;border-top:1px solid rgba(244,239,236,.15)}
+.stats div{display:flex;flex-direction:column;gap:4px}
+.stats strong{font-family:var(--serif);font-size:clamp(24px,3.4vw,32px);font-weight:500;color:#fff}
+.stats span{font-size:12px;letter-spacing:.1em;color:var(--gold)}
+
+/* PHOTO STRIP */
+.photos{background:var(--ink);padding:0 28px 90px}
+.photos .row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1080px;margin:0 auto}
+.photos figure{margin:0;border-radius:14px;overflow:hidden;position:relative;aspect-ratio:3/4}
+.photos img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.92);transition:transform .6s cubic-bezier(.2,.6,.2,1)}
+.photos figure:hover img{transform:scale(1.05)}
+.photos figcaption{position:absolute;inset-inline:0;bottom:0;padding:26px 14px 12px;font-size:11.5px;color:#efe4d8;background:linear-gradient(transparent,rgba(20,14,16,.75));opacity:0;transition:opacity .4s}
+.photos figure:hover figcaption{opacity:1}
+
+/* SECTIONS */
+section.block{padding:96px 0}
+section.block:nth-of-type(even){background:var(--cream)}
+.label{font-size:12px;letter-spacing:.26em;color:var(--gold-d);font-weight:600;margin-bottom:16px}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,5vw,52px);line-height:1.1;margin-bottom:28px}
+.lede{font-size:clamp(17px,2.4vw,21px);font-weight:300;max-width:640px}
+.lede+.lede{margin-top:18px}
+.key{font-family:var(--serif);font-size:clamp(22px,3.4vw,30px);font-weight:500;line-height:1.35;margin-top:36px;padding-inline-start:22px;border-inline-start:3px solid var(--ink);max-width:600px}
+a{color:inherit}
+
+/* FORMAT ROWS */
+.formats{border-top:1px solid rgba(29,23,25,.16)}
+.frow{display:grid;grid-template-columns:88px 1fr;gap:8px 28px;padding:30px 0;border-bottom:1px solid rgba(29,23,25,.16);align-items:baseline}
+.frow .num{font-family:var(--serif);font-size:clamp(28px,4vw,40px);font-weight:300;color:var(--gold-d)}
+.frow h3{font-size:clamp(19px,2.6vw,24px);font-weight:600;margin-bottom:6px}
+.frow p{font-size:15.5px;font-weight:300;color:#4c4145;max-width:640px}
+
+/* CONTACT */
+.contact{background:var(--ink);color:#f4efec;padding:100px 0 80px}
+.contact .label{color:var(--gold)}
+.contact h2{color:#fff}
+.ccards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.ccard{border:1px solid rgba(244,239,236,.18);border-radius:16px;padding:28px 24px;text-decoration:none;color:#f4efec;display:flex;flex-direction:column;gap:8px;transition:border-color .3s,background .3s}
+.ccard:hover{border-color:var(--gold);background:rgba(185,163,148,.08)}
+.ccard .who{font-size:12px;letter-spacing:.14em;color:var(--gold)}
+.ccard .val{font-family:var(--serif);font-size:clamp(18px,2.4vw,22px);color:#fff;direction:ltr;text-align:end}
+.ccard .val.he{direction:rtl;text-align:start}
+.ccard .what{font-size:13.5px;font-weight:300;color:#c9bcae}
+footer{background:var(--ink);color:#8f7f72;text-align:center;font-size:12px;letter-spacing:.12em;padding:34px 28px;border-top:1px solid rgba(244,239,236,.1)}
+
+@media (max-width:760px){
+  .photos .row{grid-template-columns:repeat(2,1fr)}
+  .ccards{grid-template-columns:1fr}
+  section.block{padding:72px 0}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <p class="kicker">מדיה קיט · ספטמבר 2026</p>
+  <h1>זיסי שניאורסון</h1>
+  <p class="tagline">שחקנית · יוצרת תוכן · מנחת אירועים · מובילת סדנאות צחוק</p>
+  <p class="quote">״זכיתי באוסקר, הם פשוט עוד לא יודעים״</p>
+  <div class="stats">
+    <div><strong>כ-11,000</strong><span>עוקבים באינסטגרם</span></div>
+    <div><strong>660</strong><span>פוסטים</span></div>
+    <div><strong>3</strong><span>פלטפורמות פעילות</span></div>
+    <div><strong>1</strong><span>מופע משלה</span></div>
+  </div>
+</header>
+
+<div class="photos">
+  <div class="row">
+    <figure><img src="grid-6.jpg" alt="זיסי ובנה - רגע משפחתי מתוך התוכן שלה"><figcaption>רגע משפחתי מתוך התוכן</figcaption></figure>
+    <figure><img src="grid-5.jpg" alt="זיסי - הרגע לפני השינה, הקומדיה היומיומית שלה"><figcaption>הקומדיה היומיומית</figcaption></figure>
+    <figure><img src="grid-3.jpg" alt="זיסי בעבודה - כתיבה ותוכן"><figcaption>בעבודה על התוכן</figcaption></figure>
+    <figure><img src="grid-4.jpg" alt="זיסי מצלמת תוכן בבית"><figcaption>מצלמת בבית</figcaption></figure>
+  </div>
+</div>
+
+<section class="block">
+  <div class="wrap">
+    <p class="label">מי זיסי</p>
+    <h2>היא לא מפרסמת מוצרים.<br>היא מבדרת קהל.</h2>
+    <p class="lede">זיסי היא הבידור עצמו. שחקנית וקומיקאית שהפכה את החיים לבמה: ג'ינג'ית, אמא, דוגמנית של פיג'מות - ויוצרת תוכן שמשפחות בכל ישראל עוצרות בשבילה את הגלילה.</p>
+    <p class="lede">היא לא מפרסמת מוצרים. היא מבדרת קהל - והמותגים שהיא עובדת איתם נכנסים לתוך הבדיחה.</p>
+    <p class="key">היא לא מפרסמת. היא הבידור עצמו.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <p class="label">הקהל</p>
+    <h2>קהל שקונה דרך ההמלצות שלה</h2>
+    <p class="lede">כ-11,000 עוקבים מעורבים באינסטגרם (<a href="https://www.instagram.com/zisi_just_zisi" target="_blank" rel="noopener">@zisi_just_zisi</a>), לצד נוכחות פעילה ב-YouTube וב-TikTok. קהל נשי-משפחתי בלב, עם זרוע קומית רחבה: צעירים, הורים, וכל מי שאוהב לצחוק.</p>
+    <p class="lede">מעבר לרשתות: קהילת ״קונים בכיף״ פעילה בוואטסאפ - קהל שקונה דרך ההמלצות שלה, לא רק צופה בהן.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <p class="label">פורמטים לשיתוף פעולה</p>
+    <h2>מה אפשר לבנות יחד</h2>
+    <div class="formats">
+      <div class="frow"><span class="num">01</span><div><h3>הנחיית אירועי חברה וכנסים</h3><p>מנחה שמניעה ערב שלם - במה, אנרגיה, קהל ביד.</p></div></div>
+      <div class="frow"><span class="num">02</span><div><h3>המופע ״צחוק זה לא צחוק״</h3><p>מופע מלא ומוכן להזמנה לאירועי חברות, ארגונים וקהילות.</p></div></div>
+      <div class="frow"><span class="num">03</span><div><h3>סדנאות יוגה צחוק</h3><p>סדנה חיה לעובדים וללקוחות של המותג - wellness שאנשים באמת נהנים ממנו.</p></div></div>
+      <div class="frow"><span class="num">04</span><div><h3>שגרירות מותג מתמשכת</h3><p>סדרת תוכן שנבנית סביב המותג לאורך זמן, לא פוסט חד-פעמי.</p></div></div>
+      <div class="frow"><span class="num">05</span><div><h3>תוכן ממומן מבוסס כישרון</h3><p>רילים וסטוריז קומיים שהמוצר בתוכם הוא חלק מהבדיחה, לא מודעה לידה.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <p class="label">למה זה עובד</p>
+    <h2>הקהל בא לצחוק - ונשאר להמלצות</h2>
+    <p class="lede">תוכן שאנשים שולחים אחד לשנייה בקבוצות המשפחה שווה יותר מכל מודעה ממומנת, וזה בדיוק מה שזיסי מייצרת כל שבוע.</p>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <p class="label">ליצירת קשר</p>
+    <h2>נדבר?</h2>
+    <div class="ccards">
+      <a class="ccard" href="mailto:mendi1211@gmail.com">
+        <span class="who">מנחם שניאורסון · ניהול</span>
+        <span class="val">mendi1211@gmail.com</span>
+        <span class="what">שיתופי פעולה, הצעות מחיר ותיאום</span>
+      </a>
+      <a class="ccard" href="https://wa.me/972584695350" target="_blank" rel="noopener">
+        <span class="who">וואטסאפ להזמנות</span>
+        <span class="val">058-469-5350</span>
+        <span class="what">זמינות למופעים, הנחיה וסדנאות</span>
+      </a>
+      <a class="ccard" href="https://www.instagram.com/zisi_just_zisi" target="_blank" rel="noopener">
+        <span class="who">אינסטגרם</span>
+        <span class="val he">@zisi_just_zisi</span>
+        <span class="what">התוכן, הקהל והקצב - הכל חי שם</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>מדיה קיט · זיסי שניאורסון · נכון לספטמבר 2026</footer>
+
+</body>
+</html>
